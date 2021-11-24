@@ -8,29 +8,48 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var circleProgress: CGFloat = 0.6
+    @State var circleProgress: CGFloat = 0.1
     @State var avgPrice: CGFloat = 40.26
     
     var ratings = ["Bad", "Average", "Good"]
-  
+
     
     var body: some View {
         VStack(){
+            
             //The guage and reading of avg city price
             ZStack()
             {
+                //grey background circle
+                Circle()
+                    .trim(from: 0.0, to: 1/4*3)
+                    .stroke(Color(UIColor.lightGray), lineWidth: 15)
+                    .frame(width: 150, height: 150)
+                    .rotationEffect(Angle(degrees: -225))
+                   
+                //guage circle
                 Circle()
                     .trim(from: 0.0, to: circleProgress/4*3)
                     .stroke(Color(UIColor(hue: CGFloat(circleProgress) / 3, saturation: 1.0, brightness: 1.0, alpha: 1.0)), lineWidth: 15)
                     .frame(width: 150, height: 150)
                     .rotationEffect(Angle(degrees: -225))
+                
+                //average price text
                 Text("\(Int(self.avgPrice))")
                     .font(.custom("HelveticaNeue", size: 40.0))
             }
             .padding(.top, 100)
+            
             //rating based on circle progress
-            Text(ratings[Int(ceil(circleProgress*3))-1])
-                
+            if circleProgress == 0
+            {
+                Text(ratings[0])
+            }
+            else
+            {
+                Text(ratings[Int(ceil(circleProgress*3))-1])
+            }
+            
             Divider()
             Spacer()
         }.edgesIgnoringSafeArea(.all)
