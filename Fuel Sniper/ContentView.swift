@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var circleProgress: CGFloat = 1
+    @State var circleProgress: CGFloat = 0.6
     @State var avgPrice: CGFloat = 40.26
     
     var ratings = ["Bad", "Average", "Good"]
@@ -29,7 +29,7 @@ struct ContentView: View {
             }
             .padding(.top, 100)
             //rating based on circle progress
-            Text(ratings[Int(circleProgress*3)-1])
+            Text(ratings[Int(ceil(circleProgress*3))-1])
                 
             Divider()
             Spacer()
