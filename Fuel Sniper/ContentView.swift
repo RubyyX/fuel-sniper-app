@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var circleProgress: CGFloat = 0.1
+    @State var circleProgress: CGFloat = 0.8
     @State var avgPrice: CGFloat = 40.26
+    //animation value
+    @State private var animationAmount: CGFloat = 0
     
     var ratings = ["Bad", "Average", "Good"]
 
@@ -29,7 +31,7 @@ struct ContentView: View {
                    
                 //guage circle
                 Circle()
-                    .trim(from: 0.0, to: circleProgress/4*3)
+                    .trim(from: 0.0, to: animationAmount * (circleProgress/4*3))
                     .stroke(Color(UIColor(hue: CGFloat(circleProgress) / 3, saturation: 1.0, brightness: 1.0, alpha: 1.0)), lineWidth: 15)
                     .frame(width: 150, height: 150)
                     .rotationEffect(Angle(degrees: -225))
@@ -52,8 +54,22 @@ struct ContentView: View {
             
             Divider()
             Spacer()
-        }.edgesIgnoringSafeArea(.all)
+        }
+            .edgesIgnoringSafeArea(.all)
+            .onAppear
+            {
+                //appear animation animationamount is CGFloat 0-1
+                withAnimation(Animation.easeOut(duration: 1))
+                {
+                    animationAmount = 1
+                }
+            }
+            .onDisappear
+            {
+                animationAmount = 0
+            }
     }
+    
 
 }
 
