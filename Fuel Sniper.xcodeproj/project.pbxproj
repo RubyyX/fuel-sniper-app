@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		479659F6274DF0A0007318B4 /* Fuel_SniperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479659F5274DF0A0007318B4 /* Fuel_SniperApp.swift */; };
+		479659F8274DF0A0007318B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479659F7274DF0A0007318B4 /* ContentView.swift */; };
+		479659FA274DF0A2007318B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479659F9274DF0A2007318B4 /* Assets.xcassets */; };
+		479659FD274DF0A2007318B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479659FC274DF0A2007318B4 /* Preview Assets.xcassets */; };
+		47965A07274DF0A2007318B4 /* Fuel_SniperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47965A06274DF0A2007318B4 /* Fuel_SniperTests.swift */; };
+		47965A11274DF0A2007318B4 /* Fuel_SniperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47965A10274DF0A2007318B4 /* Fuel_SniperUITests.swift */; };
+		47965A13274DF0A2007318B4 /* Fuel_SniperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47965A12274DF0A2007318B4 /* Fuel_SniperUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47965A03274DF0A2007318B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 479659EA274DF0A0007318B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479659F1274DF0A0007318B4;
+			remoteInfo = "Fuel Sniper";
+		};
+		47965A0D274DF0A2007318B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 479659EA274DF0A0007318B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479659F1274DF0A0007318B4;
+			remoteInfo = "Fuel Sniper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		479659F2274DF0A0007318B4 /* Fuel Sniper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuel Sniper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		479659F5274DF0A0007318B4 /* Fuel_SniperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuel_SniperApp.swift; sourceTree = "<group>"; };
+		479659F7274DF0A0007318B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		479659F9274DF0A2007318B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		479659FC274DF0A2007318B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		47965A02274DF0A2007318B4 /* Fuel SniperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fuel SniperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47965A06274DF0A2007318B4 /* Fuel_SniperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuel_SniperTests.swift; sourceTree = "<group>"; };
+		47965A0C274DF0A2007318B4 /* Fuel SniperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fuel SniperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47965A10274DF0A2007318B4 /* Fuel_SniperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuel_SniperUITests.swift; sourceTree = "<group>"; };
+		47965A12274DF0A2007318B4 /* Fuel_SniperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuel_SniperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		479659EF274DF0A0007318B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479659FF274DF0A2007318B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47965A09274DF0A2007318B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		479659E9274DF0A0007318B4 = {
+			isa = PBXGroup;
+			children = (
+				479659F4274DF0A0007318B4 /* Fuel Sniper */,
+				47965A05274DF0A2007318B4 /* Fuel SniperTests */,
+				47965A0F274DF0A2007318B4 /* Fuel SniperUITests */,
+				479659F3274DF0A0007318B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		479659F3274DF0A0007318B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				479659F2274DF0A0007318B4 /* Fuel Sniper.app */,
+				47965A02274DF0A2007318B4 /* Fuel SniperTests.xctest */,
+				47965A0C274DF0A2007318B4 /* Fuel SniperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		479659F4274DF0A0007318B4 /* Fuel Sniper */ = {
+			isa = PBXGroup;
+			children = (
+				479659F5274DF0A0007318B4 /* Fuel_SniperApp.swift */,
+				479659F7274DF0A0007318B4 /* ContentView.swift */,
+				479659F9274DF0A2007318B4 /* Assets.xcassets */,
+				479659FB274DF0A2007318B4 /* Preview Content */,
+			);
+			path = "Fuel Sniper";
+			sourceTree = "<group>";
+		};
+		479659FB274DF0A2007318B4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				479659FC274DF0A2007318B4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		47965A05274DF0A2007318B4 /* Fuel SniperTests */ = {
+			isa = PBXGroup;
+			children = (
+				47965A06274DF0A2007318B4 /* Fuel_SniperTests.swift */,
+			);
+			path = "Fuel SniperTests";
+			sourceTree = "<group>";
+		};
+		47965A0F274DF0A2007318B4 /* Fuel SniperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				47965A10274DF0A2007318B4 /* Fuel_SniperUITests.swift */,
+				47965A12274DF0A2007318B4 /* Fuel_SniperUITestsLaunchTests.swift */,
+			);
+			path = "Fuel SniperUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		479659F1274DF0A0007318B4 /* Fuel Sniper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47965A16274DF0A2007318B4 /* Build configuration list for PBXNativeTarget "Fuel Sniper" */;
+			buildPhases = (
+				479659EE274DF0A0007318B4 /* Sources */,
+				479659EF274DF0A0007318B4 /* Frameworks */,
+				479659F0274DF0A0007318B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fuel Sniper";
+			productName = "Fuel Sniper";
+			productReference = 479659F2274DF0A0007318B4 /* Fuel Sniper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47965A01274DF0A2007318B4 /* Fuel SniperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47965A19274DF0A2007318B4 /* Build configuration list for PBXNativeTarget "Fuel SniperTests" */;
+			buildPhases = (
+				479659FE274DF0A2007318B4 /* Sources */,
+				479659FF274DF0A2007318B4 /* Frameworks */,
+				47965A00274DF0A2007318B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47965A04274DF0A2007318B4 /* PBXTargetDependency */,
+			);
+			name = "Fuel SniperTests";
+			productName = "Fuel SniperTests";
+			productReference = 47965A02274DF0A2007318B4 /* Fuel SniperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		47965A0B274DF0A2007318B4 /* Fuel SniperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47965A1C274DF0A2007318B4 /* Build configuration list for PBXNativeTarget "Fuel SniperUITests" */;
+			buildPhases = (
+				47965A08274DF0A2007318B4 /* Sources */,
+				47965A09274DF0A2007318B4 /* Frameworks */,
+				47965A0A274DF0A2007318B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47965A0E274DF0A2007318B4 /* PBXTargetDependency */,
+			);
+			name = "Fuel SniperUITests";
+			productName = "Fuel SniperUITests";
+			productReference = 47965A0C274DF0A2007318B4 /* Fuel SniperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		479659EA274DF0A0007318B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					479659F1274DF0A0007318B4 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					47965A01274DF0A2007318B4 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 479659F1274DF0A0007318B4;
+					};
+					47965A0B274DF0A2007318B4 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 479659F1274DF0A0007318B4;
+					};
+				};
+			};
+			buildConfigurationList = 479659ED274DF0A0007318B4 /* Build configuration list for PBXProject "Fuel Sniper" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 479659E9274DF0A0007318B4;
+			productRefGroup = 479659F3274DF0A0007318B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				479659F1274DF0A0007318B4 /* Fuel Sniper */,
+				47965A01274DF0A2007318B4 /* Fuel SniperTests */,
+				47965A0B274DF0A2007318B4 /* Fuel SniperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		479659F0274DF0A0007318B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479659FD274DF0A2007318B4 /* Preview Assets.xcassets in Resources */,
+				479659FA274DF0A2007318B4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47965A00274DF0A2007318B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47965A0A274DF0A2007318B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		479659EE274DF0A0007318B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479659F8274DF0A0007318B4 /* ContentView.swift in Sources */,
+				479659F6274DF0A0007318B4 /* Fuel_SniperApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479659FE274DF0A2007318B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47965A07274DF0A2007318B4 /* Fuel_SniperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47965A08274DF0A2007318B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47965A11274DF0A2007318B4 /* Fuel_SniperUITests.swift in Sources */,
+				47965A13274DF0A2007318B4 /* Fuel_SniperUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47965A04274DF0A2007318B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 479659F1274DF0A0007318B4 /* Fuel Sniper */;
+			targetProxy = 47965A03274DF0A2007318B4 /* PBXContainerItemProxy */;
+		};
+		47965A0E274DF0A2007318B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 479659F1274DF0A0007318B4 /* Fuel Sniper */;
+			targetProxy = 47965A0D274DF0A2007318B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		47965A14274DF0A2007318B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		47965A15274DF0A2007318B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47965A17274DF0A2007318B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fuel Sniper/Preview Content\"";
+				DEVELOPMENT_TEAM = KNN74F2GGZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethancolgan.Fuel-Sniper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47965A18274DF0A2007318B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fuel Sniper/Preview Content\"";
+				DEVELOPMENT_TEAM = KNN74F2GGZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethancolgan.Fuel-Sniper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		47965A1A274DF0A2007318B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KNN74F2GGZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethancolgan.Fuel-SniperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fuel Sniper.app/Fuel Sniper";
+			};
+			name = Debug;
+		};
+		47965A1B274DF0A2007318B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KNN74F2GGZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethancolgan.Fuel-SniperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fuel Sniper.app/Fuel Sniper";
+			};
+			name = Release;
+		};
+		47965A1D274DF0A2007318B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KNN74F2GGZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethancolgan.Fuel-SniperUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fuel Sniper";
+			};
+			name = Debug;
+		};
+		47965A1E274DF0A2007318B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KNN74F2GGZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethancolgan.Fuel-SniperUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fuel Sniper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		479659ED274DF0A0007318B4 /* Build configuration list for PBXProject "Fuel Sniper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47965A14274DF0A2007318B4 /* Debug */,
+				47965A15274DF0A2007318B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47965A16274DF0A2007318B4 /* Build configuration list for PBXNativeTarget "Fuel Sniper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47965A17274DF0A2007318B4 /* Debug */,
+				47965A18274DF0A2007318B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47965A19274DF0A2007318B4 /* Build configuration list for PBXNativeTarget "Fuel SniperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47965A1A274DF0A2007318B4 /* Debug */,
+				47965A1B274DF0A2007318B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47965A1C274DF0A2007318B4 /* Build configuration list for PBXNativeTarget "Fuel SniperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47965A1D274DF0A2007318B4 /* Debug */,
+				47965A1E274DF0A2007318B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 479659EA274DF0A0007318B4 /* Project object */;
+}
