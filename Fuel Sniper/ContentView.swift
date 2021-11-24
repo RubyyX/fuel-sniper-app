@@ -8,12 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var circleProgress: CGFloat = 1
+    @State var avgPrice: CGFloat = 40.26
     var body: some View {
-        Text("Test")
-            .padding()
-        
+        VStack(){
+            //The guage and reading of avg city price
+            ZStack()
+            {
+                Circle()
+                    .trim(from: 0.0, to: circleProgress/4*3)
+                    .stroke(Color.blue, lineWidth: 15)
+                    .frame(width: 200, height: 200)
+                    .rotationEffect(Angle(degrees: -225))
+                Text("\(Int(self.avgPrice))")
+                    .font(.custom("HelveticaNeue", size: 40.0))
+            }
+            .padding(.top, 100)
+                
+            Text("Good")
+                
+            Divider()
+            Spacer()
+        }.edgesIgnoringSafeArea(.all)
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
