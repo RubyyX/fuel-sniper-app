@@ -21,7 +21,7 @@ struct ContentView: View {
             {
                 Circle()
                     .trim(from: 0.0, to: circleProgress/4*3)
-                    .stroke(Color.blue, lineWidth: 15)
+                    .stroke(Color(UIColor(hue: CGFloat(circleProgress) / 3, saturation: 1.0, brightness: 1.0, alpha: 1.0)), lineWidth: 15)
                     .frame(width: 150, height: 150)
                     .rotationEffect(Angle(degrees: -225))
                 Text("\(Int(self.avgPrice))")
@@ -35,6 +35,7 @@ struct ContentView: View {
             Spacer()
         }.edgesIgnoringSafeArea(.all)
     }
+
 }
 
 
