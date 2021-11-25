@@ -109,17 +109,21 @@ struct ContentView: View {
             {
                 //grey background circle
                 Circle()
-                    .trim(from: 0.0, to: 1/4*3)
-                    .stroke(Color(UIColor.lightGray), lineWidth: 15)
+                    .trim(from: 0.0, to: 1 / 4*3)
+                    .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
+                    .foregroundColor(Color(UIColor.white))
                     .frame(width: 150, height: 150)
                     .rotationEffect(Angle(degrees: -225))
                    
                 //guage circle
                 Circle()
-                    .trim(from: 0.0, to: animationAmount * (circleProgress/4*3))
-                    .stroke(Color(UIColor(hue: CGFloat(circleProgress) / 3, saturation: 1.0, brightness: 1.0, alpha: 1.0)), lineWidth: 15)
+                    .trim(from: 0.0, to: animationAmount*(circleProgress / 4*3))
+                    .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
+                    .foregroundColor(Color(UIColor(hue: CGFloat(circleProgress) / 3, saturation: 1.0, brightness: 1.0, alpha: 1.0)))
+                
                     .frame(width: 150, height: 150)
                     .rotationEffect(Angle(degrees: -225))
+                    
                 
                 //average price text
                 Text("\(Int(self.avgPrice))")
