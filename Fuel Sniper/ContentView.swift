@@ -139,6 +139,8 @@ struct ContentView: View {
             
             
             //Divider() is this needed?
+            let prices = getFuelPrices().map { Int($0.price) }
+            let labels = getTimeLabels()
             
             LineChartView(values: prices, labels: labels) //Display axes
             
