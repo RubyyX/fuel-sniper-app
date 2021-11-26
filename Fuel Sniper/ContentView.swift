@@ -68,17 +68,41 @@ private func getTimeLabels() -> [String] {
 }
 
 struct ContentView: View {
-    @State var circleProgress: CGFloat = 0.8
+    @State var circleProgress: CGFloat = 0.3
     @State var avgPrice: CGFloat = 40.26
-    //animation value
+    @State private var selectedFuelType = "Unleaded 95"
+    // animation value
     @State private var animationAmount: CGFloat = 0
     
-    let prices = getFuelPrices().map { Int($0.price) }
-    let labels = getTimeLabels()
-    
+    var primaryColor = Color(red: 0 / 255, green: 100 / 255, blue: 156 / 255)
     var ratings = ["Bad", "Average", "Good"]
+    let fuelTypes = ["Unleaded 95", "Unleaded 91", "Deisel"]
+
     var body: some View {
-        VStack(){
+        VStack {
+            // top panel
+            VStack {
+                // top info
+                HStack {
+                    Spacer()
+                    // fuel picker
+                    Picker("Select a fuel type", selection: $selectedFuelType) {
+                        ForEach(fuelTypes, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                
+                    .pickerStyle(.menu)
+                    Spacer()
+                    // City
+                    Text("ADELAIDE")
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                }
+            }
+            .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
+            .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
             
             //The guage and reading of avg city price
             ZStack()
@@ -133,15 +157,14 @@ struct ContentView: View {
                     animationAmount = 1
                 }
             }
-            .onDisappear
-            {
+            .onDisappear {
                 animationAmount = 0
             }
-        
-        
+    
+            Spacer()
+        }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
