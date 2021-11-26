@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-@main
+@main //Entry point to the app
 struct Fuel_SniperApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView() //Creates first view that the user sees
         }
     }
 }

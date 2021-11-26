@@ -5,7 +5,67 @@
 //  Created by Ethan Colgan on 24/11/21.
 //
 
+//  We can create other views but we get this main file to begin with. This file is linked to using the ContentView() function in the Fuel_SniperApp.swift file.
+
 import SwiftUI
+
+struct Fuel {
+    let price: Double
+}
+
+struct LineChartView: View {
+    
+    let values: [Int]
+    let labels: [String]
+    let screenWidth = UIScreen.main.bounds.width
+    
+    private var path: Path { //Using a Path variable to create a line connecting points in array
+        if values.isEmpty {
+            return Path()
+        }
+        
+        var offsetX: Int = Int(screenWidth/CGFloat(values.count)) //x distance
+        var path = Path()
+        path.move(to: CGPoint(x: offsetX, y: values[0]))
+        
+        for value in values.dropFirst() {
+            offsetX += Int(screenWidth/CGFloat(values.count))
+            path.addLine(to: CGPoint(x: offsetX, y: value))
+        }
+        return path
+    }
+    
+    var body: some View {
+        VStack {
+            path.stroke(Color.black, lineWidth: 2.0)
+                .rotationEffect(.degrees(180), anchor: .center) //Rotation moves graph to bottom
+                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0)) //Flips graph direction back
+                .frame(maxWidth: .infinity, maxHeight: 250) //Vertical placement of graph
+            
+            HStack {
+                ForEach(labels, id: \.self) {
+                    label in Text(label).frame(width: screenWidth/CGFloat(labels.count) - 10)
+                }
+            }
+        }
+    }
+}
+
+private func getFuelPrices() -> [Fuel] { //Function that returns array of random prices (testing)
+    var fuelPrices = [Fuel]() //Declare variable
+    
+    for _ in 1...20 {
+            let fuel_cost = Fuel(price: Double.random(in: 100...200)) //Random int between 100-200
+            fuelPrices.append(fuel_cost) //Append price to array
+    }
+    return fuelPrices
+}
+
+private func getTimeLabels() -> [String] {
+    return (2015...2021).map {
+        String($0)
+    }
+}
 
 struct ContentView: View {
     @State var circleProgress: CGFloat = 0.8
@@ -13,9 +73,10 @@ struct ContentView: View {
     //animation value
     @State private var animationAmount: CGFloat = 0
     
-    var ratings = ["Bad", "Average", "Good"]
-
+    let prices = getFuelPrices().map { Int($0.price) }
+    let labels = getTimeLabels()
     
+    var ratings = ["Bad", "Average", "Good"]
     var body: some View {
         VStack(){
             
@@ -41,7 +102,7 @@ struct ContentView: View {
                     .font(.custom("HelveticaNeue", size: 40.0))
             }
             .padding(.top, 100)
-            
+        
             //rating based on circle progress
             if circleProgress == 0
             {
@@ -52,9 +113,17 @@ struct ContentView: View {
                 Text(ratings[Int(ceil(circleProgress*3))-1])
             }
             
-            Divider()
+            
+            //Divider() is this needed?
+            
+            LineChartView(values: prices, labels: labels) //Display axes
+            
             Spacer()
+            
+            
+            
         }
+        .background(Color.green)
             .edgesIgnoringSafeArea(.all)
             .onAppear
             {
@@ -68,9 +137,9 @@ struct ContentView: View {
             {
                 animationAmount = 0
             }
+        
+        
     }
-    
-
 }
 
 
