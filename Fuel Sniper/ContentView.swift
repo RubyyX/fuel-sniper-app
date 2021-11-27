@@ -37,7 +37,7 @@ struct LineChartView: View {
     
     var body: some View {
         VStack {
-            path.stroke(Color.black, lineWidth: 2.0)
+            path.stroke(Color.white, lineWidth: 2.0)
                 .rotationEffect(.degrees(180), anchor: .center) //Rotation moves graph to bottom
                 .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0)) //Flips graph direction back
                 .frame(maxWidth: .infinity, maxHeight: 250) //Vertical placement of graph
@@ -138,17 +138,16 @@ struct ContentView: View {
             }
             
             
-            //Divider() is this needed?
-            let prices = getFuelPrices().map { Int($0.price) }
-            let labels = getTimeLabels()
+            //Divider()
             
-            LineChartView(values: prices, labels: labels) //Display axes
+            let prices = getFuelPrices().map { Int($0.price) } //Prices array
+            let labels = getTimeLabels() //Labels array
             
-            Spacer()
+            LineChartView(values: prices, labels: labels) //Display graph by calling function
             
-            
-            
+            Spacer() //Space after the graph
         }
+        
         .background(Color.green)
             .edgesIgnoringSafeArea(.all)
             .onAppear
@@ -166,7 +165,6 @@ struct ContentView: View {
             Spacer()
         }
     }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
