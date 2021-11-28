@@ -9,6 +9,7 @@
 
 import SwiftUI
 
+
 struct Fuel {
     let price: Double
 }
@@ -29,6 +30,8 @@ private func getTimeLabels() -> [String] {
     }
 }
 
+let menuColor = hex2RGB(hex: "168AAD")
+
 struct ContentView: View {
     @State var circleProgress: CGFloat = 0.6
     @State var avgPrice: CGFloat = 40.26
@@ -36,7 +39,8 @@ struct ContentView: View {
     // animation value
     @State private var animationAmount: CGFloat = 0
     
-    var primaryColor = Color(red: 0 / 255, green: 100 / 255, blue: 156 / 255)
+    let primaryColor = Color(red: 126 / 255, green: 63 / 255, blue: 143 / 255)
+    let backColor = Color(.white)
     var ratings = ["Expensive", "Average", "Cheap"]
     let fuelTypes = ["Unleaded 95", "Unleaded 91", "Deisel"]
 
@@ -62,9 +66,10 @@ struct ContentView: View {
                     
                     Spacer()
                 }
+                .padding(.leading, 0)
             }
             .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
-            .padding(EdgeInsets(top: 5, leading: 5, bottom: 0, trailing: 5))
+            .padding(EdgeInsets(top: 5, leading: 15, bottom: 0, trailing: 15))
             
             // middle Panel
             VStack {
@@ -102,7 +107,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .bold()
                 }
-                .padding(.top, 0)
+                .padding(.top, 10)
                 
                 // rating based on circle progress
                 if circleProgress == 0 {
@@ -113,6 +118,7 @@ struct ContentView: View {
                     Text(ratings[Int(ceil(circleProgress*3)) - 1])
                         .foregroundColor(.white)
                         .font(.system(size: 25))
+                        .padding(.bottom, 5)
                 }
             }
             .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
@@ -133,13 +139,13 @@ struct ContentView: View {
             let prices = getFuelPrices().map { Int($0.price) } //Prices array
             let labels = getTimeLabels() //Labels array
             
-            LineChartView(values: prices, labels: labels) //Display graph by calling function
+                LineChartView(values: prices, labels: labels) //Display graph by calling function
             }
             .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
             .padding(.all)
             
             Spacer()
-        }
+        }.background(backColor)
     }
 }
 
