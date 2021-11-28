@@ -116,8 +116,8 @@ struct ContentView: View {
                 }
             }
             .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
-            .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
-            
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+
             .onAppear {
                 // appear animation animationamount is CGFloat 0-1
                 withAnimation(Animation.easeOut(duration: 1)) {
@@ -136,7 +136,7 @@ struct ContentView: View {
             LineChartView(values: prices, labels: labels) //Display graph by calling function
             }
             .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
-            .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
+            .padding(.all)
             
             Spacer()
         }
