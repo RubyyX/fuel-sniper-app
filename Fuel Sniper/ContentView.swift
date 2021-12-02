@@ -16,10 +16,10 @@ struct Fuel {
 
 private func getFuelPrices() -> [Fuel] { //Function that returns array of random prices (testing)
     var fuelPrices = [Fuel]() //Declare variable
-    
+
     for _ in 1...20 {
-            let fuel_cost = Fuel(price: Double.random(in: 100...200)) //Random int between 100-200
-            fuelPrices.append(fuel_cost) //Append price to array
+        let fuel_cost = Fuel(price: Double.random(in: 100...200)) //Random int between 100-200
+        fuelPrices.append(fuel_cost) //Append price to array
     }
     return fuelPrices
 }
@@ -38,7 +38,7 @@ struct ContentView: View {
     @State private var selectedFuelType = "Unleaded 95"
     // animation value
     @State private var animationAmount: CGFloat = 0
-    
+
     let primaryColor = Color(red: 126 / 255, green: 63 / 255, blue: 143 / 255)
     let backColor = Color(.white)
     var ratings = ["Expensive", "Average", "Cheap"]
@@ -57,20 +57,20 @@ struct ContentView: View {
                             Text($0)
                         }
                     }
-                
-                    .pickerStyle(.menu)
+
+                        .pickerStyle(.menu)
                     Spacer()
                     // City
                     Text("ADELAIDE")
                         .foregroundColor(.white)
-                    
+
                     Spacer()
                 }
-                .padding(.leading, 0)
+                    .padding(.leading, 0)
             }
-            .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
-            .padding(EdgeInsets(top: 5, leading: 15, bottom: 0, trailing: 15))
-            
+                .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
+                .padding(EdgeInsets(top: 5, leading: 15, bottom: 0, trailing: 15))
+
             // middle Panel
             VStack {
                 // makes width fill
@@ -81,70 +81,76 @@ struct ContentView: View {
                 Text("Today's Average Price AUD")
                     .foregroundColor(.white)
                     .font(.system(size: 20))
-                
+
                 // The guage and reading of avg city price
                 ZStack {
                     // grey background circle
                     Circle()
-                        .trim(from: 0.0, to: 1 / 4*3)
+                        .trim(from: 0.0, to: 1 / 4 * 3)
                         .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
                         .foregroundColor(Color(UIColor.white))
                         .frame(width: 150, height: 150)
                         .rotationEffect(Angle(degrees: -225))
-                       
+
                     // guage circle
                     Circle()
-                        .trim(from: 0.0, to: animationAmount*(circleProgress / 4*3))
+                        .trim(from: 0.0, to: animationAmount * (circleProgress / 4 * 3))
                         .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
                         .foregroundColor(Color(UIColor(hue: CGFloat(circleProgress) / 3, saturation: 1.0, brightness: 1.0, alpha: 1.0)))
-                    
+
                         .frame(width: 150, height: 150)
                         .rotationEffect(Angle(degrees: -225))
-                        
+
                     // average price text
                     Text("\(Int(self.avgPrice))")
                         .font(.custom("HelveticaNeue", size: 40.0))
                         .foregroundColor(.white)
                         .bold()
                 }
-                .padding(.top, 10)
-                
+                    .padding(.top, 10)
+
                 // rating based on circle progress
                 if circleProgress == 0 {
                     Text(ratings[0])
                         .foregroundColor(.white)
                 }
                 else {
-                    Text(ratings[Int(ceil(circleProgress*3)) - 1])
+                    Text(ratings[Int(ceil(circleProgress * 3)) - 1])
                         .foregroundColor(.white)
                         .font(.system(size: 25))
                         .padding(.bottom, 5)
                 }
             }
-            .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
 
-            .onAppear {
+                .onAppear {
                 // appear animation animationamount is CGFloat 0-1
                 withAnimation(Animation.easeOut(duration: 1)) {
                     animationAmount = 1
                 }
             }
-            .onDisappear {
+                .onDisappear {
                 animationAmount = 0
             }
-            
+
             //3rd panel "graph"
-            VStack(){
-            let prices = getFuelPrices().map { Int($0.price) } //Prices array
-            let labels = getTimeLabels() //Labels array
-            
+            VStack() {
+                let prices = getFuelPrices().map { Int($0.price) } //Prices array
+                let labels = getTimeLabels() //Labels array
+
                 LineChartView(values: prices, labels: labels) //Display graph by calling function
             }
-            .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
-            .padding(.all)
-            
+                .background(RoundedRectangle(cornerRadius: 10).fill(primaryColor))
+                .padding(.all)
+
             Spacer()
+
+            VStack() { //Vstack to handle menu text. Not sure if an actual menu is needed we only really need the dashboard for now.
+                /*@START_MENU_TOKEN@*/Text("Menu Item 1")/*@END_MENU_TOKEN@*/
+                /*@START_MENU_TOKEN@*/Text("Menu Item 2")/*@END_MENU_TOKEN@*/
+                /*@START_MENU_TOKEN@*/Text("Menu Item 3")/*@END_MENU_TOKEN@*/
+            }
         }.background(backColor)
     }
 }
