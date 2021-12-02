@@ -50,4 +50,3 @@ func getPrices(countryID: Int, geoRegionLevel: Int, geoRegionID: Int) -> String 
 }
 
 
-var textVal = getPrices(countryID: countryID, geoRegionLevel: geoRegionLevel, geoRegionID: geoRegionID)

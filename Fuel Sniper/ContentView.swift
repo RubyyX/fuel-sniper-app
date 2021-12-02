@@ -129,6 +129,7 @@ struct ContentView: View {
                 withAnimation(Animation.easeOut(duration: 1)) {
                     animationAmount = 1
                 }
+                    var prices = getPrices(countryID: 3, geoRegionLevel: 3, geoRegionID: 3)
             }
                 .onDisappear {
                 animationAmount = 0
