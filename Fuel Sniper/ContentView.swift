@@ -129,7 +129,13 @@ struct ContentView: View {
                 withAnimation(Animation.easeOut(duration: 1)) {
                     animationAmount = 1
                 }
-                    var prices = getPrices(countryID: 3, geoRegionLevel: 3, geoRegionID: 3)
+                
+                //Testing the getPrices API function call
+                var prices = [SitePrice]()
+                    prices = getPrices(countryID: 3,
+                    geoRegionLevel: 3,
+                    geoRegionID: 3)
+                dump(prices) //Outputs no elements => array empty
             }
                 .onDisappear {
                 animationAmount = 0
@@ -147,8 +153,12 @@ struct ContentView: View {
 
             Spacer()
 
-            VStack() { //Vstack to handle menu text. Not sure if an actual menu is needed we only really need the dashboard for now.
-                /*@START_MENU_TOKEN@*/Text("Menu Item 1")/*@END_MENU_TOKEN@*/
+            //Vstack to handle menu text
+            VStack() {
+//                let prices = getPrices(countryID: 3,
+//                                       geoRegionLevel: 3,
+//                                       geoRegionID: 3)
+//                Text(String(prices[0].Price))
                 /*@START_MENU_TOKEN@*/Text("Menu Item 2")/*@END_MENU_TOKEN@*/
                 /*@START_MENU_TOKEN@*/Text("Menu Item 3")/*@END_MENU_TOKEN@*/
             }

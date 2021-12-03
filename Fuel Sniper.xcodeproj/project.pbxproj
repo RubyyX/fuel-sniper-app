@@ -10,6 +10,8 @@
 		47543B05275398BB000B139F /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47543B04275398BB000B139F /* LineChartView.swift */; };
 		47543B072753E5C8000B139F /* Hex2RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47543B062753E5C8000B139F /* Hex2RGB.swift */; };
 		47543B0B2758DF98000B139F /* API_Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47543B0A2758DF97000B139F /* API_Testing.swift */; };
+		47543B0D2759A8AB000B139F /* SitePrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47543B0C2759A8AB000B139F /* SitePrices.swift */; };
+		47543B0F2759A920000B139F /* SitePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47543B0E2759A920000B139F /* SitePrice.swift */; };
 		479659F6274DF0A0007318B4 /* Fuel_SniperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479659F5274DF0A0007318B4 /* Fuel_SniperApp.swift */; };
 		479659F8274DF0A0007318B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479659F7274DF0A0007318B4 /* ContentView.swift */; };
 		479659FA274DF0A2007318B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479659F9274DF0A2007318B4 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		47543B04275398BB000B139F /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		47543B062753E5C8000B139F /* Hex2RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex2RGB.swift; sourceTree = "<group>"; };
 		47543B0A2758DF97000B139F /* API_Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Testing.swift; sourceTree = "<group>"; };
+		47543B0C2759A8AB000B139F /* SitePrices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitePrices.swift; sourceTree = "<group>"; };
+		47543B0E2759A920000B139F /* SitePrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitePrice.swift; sourceTree = "<group>"; };
 		479659F2274DF0A0007318B4 /* Fuel Sniper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuel Sniper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		479659F5274DF0A0007318B4 /* Fuel_SniperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuel_SniperApp.swift; sourceTree = "<group>"; };
 		479659F7274DF0A0007318B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				479659F5274DF0A0007318B4 /* Fuel_SniperApp.swift */,
 				479659F7274DF0A0007318B4 /* ContentView.swift */,
 				47543B0A2758DF97000B139F /* API_Testing.swift */,
+				47543B0E2759A920000B139F /* SitePrice.swift */,
+				47543B0C2759A8AB000B139F /* SitePrices.swift */,
 				47543B062753E5C8000B139F /* Hex2RGB.swift */,
 				47543B04275398BB000B139F /* LineChartView.swift */,
 				479659F9274DF0A2007318B4 /* Assets.xcassets */,
@@ -266,10 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47543B0F2759A920000B139F /* SitePrice.swift in Sources */,
 				47543B0B2758DF98000B139F /* API_Testing.swift in Sources */,
 				479659F8274DF0A0007318B4 /* ContentView.swift in Sources */,
 				479659F6274DF0A0007318B4 /* Fuel_SniperApp.swift in Sources */,
 				47543B072753E5C8000B139F /* Hex2RGB.swift in Sources */,
+				47543B0D2759A8AB000B139F /* SitePrices.swift in Sources */,
 				47543B05275398BB000B139F /* LineChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,20 +7,24 @@
 
 import Foundation
 
-var countryID = 21
-var geoRegionLevel = 3
-var geoRegionID = 4
+func parseJSONPrices(data: Data) -> Array<SitePrice> { //Return type is array of SitePrice objects
+    var sitePricesArr = [SitePrice]() //Initialise site prices as array of 'site price objects'
+    if let jsonPrices = try? JSONDecoder().decode(SitePrices.self, from: data) {
+        sitePricesArr = jsonPrices.SitePrices
+    }
+    return sitePricesArr
+}
 
-func getPrices(countryID: Int, geoRegionLevel: Int, geoRegionID: Int) -> String {
+func getPrices(countryID: Int, geoRegionLevel: Int, geoRegionID: Int) -> Array<SitePrice> {
+    
+    var result: Array<SitePrice> = []
+    
     // Create URL
-    var returnVal: String = "CodeError"
-    let url = URL(string: "https://fppdirectapi-prod.safuelpricinginformation.com.au/Price/GetSitesPrices?countryId=21&geoRegionLevel=2&geoRegionId=189")
+    let url = URL(string: "https://fppdirectapi-prod.safuelpricinginformation.com.au/Price/GetSitesPrices?countryId=" + String(countryID) + "&geoRegionLevel=" + String(geoRegionLevel) + "&geoRegionId=" + String(geoRegionID))
     guard let requestUrl = url else { fatalError() }
-    // Create URL Request
-    var request = URLRequest(url: requestUrl)
-    // Specify HTTP Method to use
-    request.httpMethod = "GET"
-    // Set HTTP Request Header
+    
+    var request = URLRequest(url: requestUrl) // Create URL Request
+    request.httpMethod = "GET" // Specify HTTP Method to use and headers below
     request.setValue("FPDAPI SubscriberToken=52c12b44-b208-4b74-8109-70a3c2c3aaef", forHTTPHeaderField: "Authorization")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     
@@ -38,15 +42,11 @@ func getPrices(countryID: Int, geoRegionLevel: Int, geoRegionID: Int) -> String 
             print("Response HTTP Status code: \(response.statusCode)")
         }
 
-        // Convert HTTP Response Data to a simple String
-        if let data = data, let dataString = String(data: data, encoding: .utf8) {
-            print("Response data string:\n \(dataString)")
-            returnVal = String(data: data, encoding: .utf8)! //'!' Unwraps the optional string into a static string.
-        }
+        guard let data = data else { return }
+        result = parseJSONPrices(data: data) //Parse JSON data into result and return
 
     }
+    
     task.resume()
-    return returnVal
+    return result
 }
-
-
